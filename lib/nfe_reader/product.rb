@@ -11,7 +11,7 @@ module NfeReader
       :discount, :other_value, :importation, :icms, :ipi, :pis,
       :importation_tax, :exportation, :demand_number, :demand_item,
       :armament, :fuel, :vehicle, :medicament, :cofins, :pis_st,
-      :cofins_st, :issqn, :tax_value, :fci
+      :cofins_st, :issqn, :tax_value, :fci, :inf
 
     # == Fields Values
     #
@@ -20,6 +20,7 @@ module NfeReader
     #
     def initialize(attrs = {})
       @number = attrs[:nItem]
+      @inf = attrs[:infAdProd]
       
       if attrs[:prod]
         @code = attrs[:prod][:cProd]
